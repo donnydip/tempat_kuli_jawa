@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:x="adobe:ns:meta/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg56"
+   sodipodi:docname="logotkj2.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview58"
+     showgrid="false"
+     inkscape:zoom="26.422438"
+     inkscape:cx="16"
+     inkscape:cy="16"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg56" />
+  <metadata
+     id="metadata2">
+<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>    <x:xmpmeta
+       x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+      <metadata>
+        <rdf:RDF>
+          <rdf:Description
+             rdf:about="" />
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+    </x:xmpmeta>
+<?xpacket end="w"?>  </metadata>
+  <defs
+     id="defs41">
+    <style
+       id="style4">
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #203f97;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        filter: url(#filter-3);
+      }
+
+      .cls-4 {
+        filter: url(#filter-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-5);
+      }
+
+      .cls-6 {
+        font-size: 174.711px;
+        fill: #fff;
+        font-family: DrukTextWide-Super, &quot;Druk Text Wide&quot;;
+      }
+    </style>
+    <filter
+       id="filter"
+       x="7"
+       y="2"
+       width="19"
+       height="6.875"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#fff"
+         id="feFlood6" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite8" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend10" />
+    </filter>
+    <filter
+       id="filter-2"
+       x="9.719"
+       y="4.438"
+       width="1.25"
+       height="1.969"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#fff"
+         id="feFlood13" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite15" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend17" />
+    </filter>
+    <filter
+       id="filter-3"
+       x="8.25"
+       y="7.469"
+       width="1.156"
+       height="13.594"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#fff"
+         id="feFlood20" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite22" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend24" />
+    </filter>
+    <filter
+       id="filter-4"
+       x="23.469"
+       y="7.469"
+       width="1.188"
+       height="13.563"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#fff"
+         id="feFlood27" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite29" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend31" />
+    </filter>
+    <filter
+       id="filter-5"
+       x="8.219"
+       y="21"
+       width="16.406"
+       height="1.281"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         result="flood"
+         flood-color="#fff"
+         id="feFlood34" />
+      <feComposite
+         result="composite"
+         operator="in"
+         in2="SourceGraphic"
+         id="feComposite36" />
+      <feBlend
+         result="blend"
+         in2="SourceGraphic"
+         id="feBlend38" />
+    </filter>
+  </defs>
+  <path
+     id="Rectangle_1_copy"
+     data-name="Rectangle 1 copy"
+     class="cls-1"
+     d="M7,7.85L16.485,2l0.557,1.031L7.558,8.881ZM25.443,8.881l-9.484-5.85L16.517,2,26,7.85Z"
+     style="fill:#ffffff" />
+  <path
+     class="cls-2"
+     d="M9.709,4.442h1.265V6.4H9.709V4.442Z"
+     id="path44"
+     style="fill:#ffffff" />
+  <image
+     id="toppng.com-hammer-png-981x972"
+     x="10"
+     y="8"
+     width="5"
+     height="10"
+     xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAQAAADWMFy7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQflBRkOEwl9AWPIAAAAVElEQVQI1zXIsQ1AQABA0X9IFJrriJhAZw2TGEppCnOIwh6iIL7iont5wY6LBtlxcnVztsZg6WJlLJCbhxMyoGeAxJeTLBEq3sRI++9BTgBEHA3yATqCHwnQ8I1DAAAAAElFTkSuQmCC"
+     style="fill:#ffffff" />
+  <image
+     id="kisspng-paint-trade-centre-paint-rollers-paintbrush-oil-pa-rouleau-5b3d9ed70a3ef5.515004601530765015042"
+     x="14"
+     y="13"
+     width="5"
+     height="7"
+     xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAHCAQAAABqrk9lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQflBRkOEwl9AWPIAAAAOklEQVQI1zXGqw2AQAAFwTk+guQSkFRGEWiKozEEQTwE3K6ZkvgrOcxuVS/fU3RgtzGA1dW4GBtPDy9wpQ0yXvREEgAAAABJRU5ErkJggg=="
+     style="fill:#ffffff" />
+  <image
+     id="pngfind.com-monkey-wrench-png-6174658"
+     x="19"
+     y="8"
+     width="4"
+     height="10"
+     xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAKCAQAAAA58jeFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQflBRkOEwl9AWPIAAAATUlEQVQI1wXBsQ1AUBRA0fvf/6IjsQCxhFGtYA29AURjAIlCI9Fc5yBmJ5skrGycmF3UFpOVtwTSc1AQay8JYOSjRux8LQEMPEQAOzP865Mh97bJk5IAAAAASUVORK5CYII="
+     style="fill:#ffffff" />
+  <path
+     class="cls-3"
+     d="M8.244,7.455H9.419v13.6H8.244V7.455Z"
+     id="path49"
+     style="fill:#ffffff" />
+  <path
+     id="Rectangle_2_copy"
+     data-name="Rectangle 2 copy"
+     class="cls-4"
+     d="M23.479,7.455h1.174V21.017H23.479V7.455Z"
+     style="fill:#ffffff" />
+  <path
+     id="Rectangle_2_copy_2"
+     data-name="Rectangle 2 copy 2"
+     class="cls-5"
+     d="M8.213,21.034l16.42-.019V22.26l-16.42.019V21.034Z"
+     style="fill:#ffffff" />
+  <image
+     id="Shape_1"
+     data-name="Shape 1"
+     x="15"
+     y="8"
+     width="4"
+     height="3"
+     xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQflBRkOEwl9AWPIAAAAJklEQVQI1wEbAOT/AP9R/9X/2f9IAP/H/zb/S/+zAf+WAPAADADp8XYPtt443LIAAAAASUVORK5CYII="
+     style="fill:#ffffff" />
+  <text
+     id="TEMPATNYA_KULI_JAWA"
+     data-name="TEMPATNYA KULI JAWA"
+     class="cls-6"
+     transform="translate(9.237 29.844) scale(0.005 0.005)"
+     style="fill:#ffffff;">TEMPATNYA KULI JAWA</text>
+  <text
+     id="TKJ"
+     class="cls-6"
+     transform="matrix(0.031, 0, -0.009, 0.034, 7.464, 27.936)"
+     style="fill:#ffffff;">TKJ</text>
+</svg>
