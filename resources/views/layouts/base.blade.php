@@ -80,13 +80,13 @@
               @if (Auth::check())
               @else
             <li class="nav-item">
-            <a class="btn btn-outline-primary" href="{{ route('login') }}" target="_blank">
+            <a class="btn btn-outline-primary" href="{{ route('login') }}">
                 <span class="nav-link-inner--text">Login</span>
             </a>
             </li>
 
             <li class="nav-item d-none d-lg-block">
-            <a href="{{ route('register') }}" target="_blank" class="btn btn-primary btn-icon">
+            <a href="{{ route('register') }}" class="btn btn-primary btn-icon">
                 <span class="btn-inner--icon">
                     <i class="ni ni-circle-08"></i>
                 </span>

@@ -1,13 +1,59 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
+# Laravel specific
 /vendor
+/node_modules
+/public/storage
+/public/hot
+/storage/*.key
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
 .env
-.env.backup
+.env.*.backup
 .phpunit.result.cache
-docker-compose.override.yml
+.phpunit.cache
+.phpactor.json
 Homestead.json
 Homestead.yaml
-npm-debug.log
-yarn-error.log
+/.vagrant
+/.phpunit.result.cache
+/.phpunit.cache
+.composer/cache
+.npm/
+
+# IDE specific
+/.idea
+/.vscode
+/.nova
+/.fleet
+/.zed
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-error.log*
+
+# Composer
+/vendor/
+
+# NPM
+node_modules/
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+# Miscellaneous
+/auth.json
