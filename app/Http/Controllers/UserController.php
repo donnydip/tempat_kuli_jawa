@@ -37,8 +37,8 @@ class UserController extends Controller
     // }
     public function orderuser()
     {
-        $id = Auth::user()->id;
-        $user = Orders::with('OrdersDetails:id,orders_id,nama_tukang,jenis_keahlian,status,status_pembayaran,tanggal_mulai,tanggal_akhir')
+        $id = Auth::id();
+        $user = Orders::with('OrdersDetails')
         ->where('user_id',$id)
         ->paginate('10');
         return view('orders.order_user',compact('user'));

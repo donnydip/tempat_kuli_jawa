@@ -11,6 +11,8 @@ class OrdersDetail extends Model
 {
     use HasFactory, Notifiable, HasRoles;
 
+    protected $table = 'orders_detail';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -32,6 +34,6 @@ class OrdersDetail extends Model
 
     public function Orders()
     {
-        return $this->belongsTo(Orders::class,'orders_id','id');
+        return $this->belongsTo(Orders::class,'order_id','id');
     }
 }

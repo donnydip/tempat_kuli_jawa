@@ -24,23 +24,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="card bg-secondary shadow border-0">
-              <div class="card-header bg-white pb-5">
-                <div class="text-muted text-center mb-3"><small>Sign up with</small></div>
-                <div class="text-center">
-                  <a href="#" class="btn btn-neutral btn-icon mr-4">
-                    <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/fb.svg')}}"></span>
-                    <span class="btn-inner--text">Facebook</span>
-                  </a>
-                  <a href="#" class="btn btn-neutral btn-icon">
-                    <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/google.svg')}}"></span>
-                    <span class="btn-inner--text">Google</span>
-                  </a>
-                </div>
-              </div>
               <div class="card-body px-lg-5 py-lg-5">
-                <div class="text-center text-muted mb-4">
-                  <small>Or sign up with credentials</small>
-                </div>
                 <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                     @csrf
                   <div class="form-group">
@@ -83,15 +67,17 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="input-group input-group-alternative mb-3">
-                        <span class="input-group-text"><i class="ni ni-single-02"></i>&ensp; Foto Diri&ensp;</span>
-                        <input type="file" class="form-control @error('foto') is-invalid @enderror" name="foto" value="{{ old('foto') }}" required autocomplete="foto" autofocus id="customFile" />
-                        @error('foto')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                    <label for="customFile" class="font-weight-bold">Foto Diri</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input @error('foto') is-invalid @enderror" name="foto" id="customFile" accept="image/*" required>
+                      <label class="custom-file-label" for="customFile">Pilih foto...</label>
+                      @error('foto')
+                        <span class="invalid-feedback d-block" role="alert">
+                          <strong>{{ $message }}</strong>
                         </span>
-                        @enderror
+                      @enderror
                     </div>
+                    <small class="form-text text-muted">Format: JPG, PNG. Maksimal 2MB.</small>
                   </div>
                   <div class="form-group">
                     <div class="input-group input-group-alternative mb-3">
@@ -137,16 +123,40 @@
                     </div>
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn btn-primary mt-4">Create account</button>
+                    <button type="submit" class="btn btn-primary mt-4" id="createAccountBtn" disabled>Create account</button>
                   </div>
                 </form>
               </div>
             </div>
             <div class="col-20 text-right">
                 <a href="{{ route('login') }}" class="text-light"><small>Already have an account? Sign in</small></a>
-              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var fileInput = document.getElementById('customFile');
+  if (fileInput) {
+    fileInput.addEventListener('change', function (e) {
+      var fileName = e.target.files[0] ? e.target.files[0].name : "Pilih foto...";
+      var nextLabel = e.target.nextElementSibling;
+      if (nextLabel && nextLabel.classList.contains('custom-file-label')) {
+        nextLabel.innerText = fileName;
+      }
+    });
+  }
+
+  var checkBox = document.getElementById('customCheckRegister');
+  var createBtn = document.getElementById('createAccountBtn');
+  if (checkBox && createBtn) {
+    checkBox.addEventListener('change', function () {
+      createBtn.disabled = !this.checked;
+    });
+  }
+});
+</script>
 @endsection

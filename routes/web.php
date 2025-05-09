@@ -34,6 +34,7 @@ Route::group(['middleware' => ['role:user']], function () {
         Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
         Route::get('userprofile', ['as' => 'userprofile.edit', 'uses' => 'App\Http\Controllers\UserProfileController@edit']);
         Route::put('userprofile', ['as' => 'userprofile.update', 'uses' => 'App\Http\Controllers\UserProfileController@update']);
+        Route::put('userprofile/photo', ['as' => 'userprofile.updatePhoto', 'uses' => 'App\Http\Controllers\UserProfileController@updatePhoto']);
         Route::put('userprofile/userpassword', ['as' => 'userprofile.password', 'uses' => 'App\Http\Controllers\UserProfileController@password']);
         Route::get('/order',[OrderController::class, 'show']);
         Route::post('/order',[OrderController::class, 'store'])->name('order');

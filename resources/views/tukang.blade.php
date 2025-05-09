@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="card-body pt-0">
-            <div class="row">
+            {{-- <div class="row">
               <div class="col">
                 <div class="card-profile-stats d-flex justify-content-center">
                   <div>
@@ -41,7 +41,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             <div class="text-center">
               <h5 class="h3" style="color: black">
                 {{ Auth::user()->name }}
@@ -74,49 +74,54 @@
               </tr>
             </thead>
             <tbody class="list">
-        @foreach ($tukang as $tkg)
-        <form action="{{ route('detailorder') }}" method="post">
-            @csrf
-              <tr>
-                <th scope="row">
-                  <div class="media align-items-center">
-                    <div class="media-body">
-                      <span class="name mb-0 text-sm">{{ $tkg->orders_id }}</span>
-                    </div>
-                  </div>
-                </th>
-                <td class="budget">
-                {{ $tkg->user_id }}
-                </td>
-                <td>
-                    {{ $tkg->tanggal_mulai }}
-                </td>
-                <td>
-                    {{ $tkg->total_biaya }}
-                </td>
-                <td>
-                    <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i>
-                        <span class="status">{{ $tkg->status }}</span>
-                      </span>
-                </td>
-                <td>
-                    {{ $tkg->status_pembayaran }}
-                </td>
-                <td class="text-right">
-                  <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <input type="hidden" value="{{$tkg->orders_id}}" name="order_id">
-                        <input type="submit" class="dropdown-item" value="Detail" name="detail">
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </form>
-        @endforeach
+              @foreach ($tukang as $tkg)
+              <form action="{{ route('detailorder') }}" method="post">
+                  @csrf
+                    <tr>
+                      <th scope="row">
+                        <div class="media align-items-center">
+                          <div class="media-body">
+                            <span class="name mb-0 text-sm">{{ $tkg->order_id }}</span>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="budget">
+                      {{ $tkg->user_id }}
+                      </td>
+                      <td>
+                          {{ $tkg->tanggal_mulai }}
+                      </td>
+                      <td>
+                          {{ $tkg->total_biaya }}
+                      </td>
+                      <td>
+                          <span class="badge badge-dot mr-4">
+                              <i class="bg-warning"></i>
+                              <span class="status">{{ $tkg->status }}</span>
+                            </span>
+                      </td>
+                      <td>
+                          {{ $tkg->status_pembayaran }}
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                              <input type="hidden" value="{{$tkg->order_id}}" name="order_id">
+                              <input type="submit" class="dropdown-item" value="Detail" name="detail">
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </form>
+              @endforeach
+              @if ($tukang->isEmpty())
+                <tr>
+                  <td colspan="8" class="text-center">Tidak ada data</td>
+                </tr>
+              @endif
             </tbody>
           </table>
         </div>

@@ -30,8 +30,7 @@ class TukangController extends Controller
      */
     protected function store(Request $request)
     {
-       $aktif=Auth::id();
-       $user = User::find($aktif);
+       $user = User::find(Auth::id());
        $user->nik = $request->input('nik');
        $user->keahlian = $request->input('keahlian');
 
@@ -56,19 +55,10 @@ class TukangController extends Controller
 
     public function tukang()
     {
-        // OrdersDetail::OrdersDetails(OrdersDetail::class,'tukang_id','id');
-        $tukangid = Auth::id();
-        // $tukangor = DB::table('orders')->where('tukang_id',$tukangid)->select('id');
-
-        // $tukangusr = DB::table('orders')->where('tukang_id',$tukangid)->select('user_id');
-        // $tukang = Orders::with('OrdersDetails:id,tanggal_mulai,total_biaya,status,status_pembayaran')
-        //                     ->where('tukang_id',$tukangid)->get();
-        // $tukang = DB::table('orders_details')->whereIn('orders_id',$tukangor)->get();
         $tukang = DB::table('orders')
-                ->join('orders_details','orders_id','=','orders.id')
-                ->where('tukang_id',$tukangid)
+                ->join('orders_detail','orders.id','=','orders_detail.order_id')
+                ->where('tukang_id',Auth::id())
                 ->paginate('10');
-        // dd($tukang);
        return view('tukang',compact('tukang'));
     }
     public function acc()

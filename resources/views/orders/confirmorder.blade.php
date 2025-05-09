@@ -31,7 +31,7 @@
 		                                	<div class="col-sm-6">
 												<div class="form-group label-floating">
                                                     <h6>Order ID</h6>
-                                                    <h6 class="form-control">{{ $detail->orders_id }}</h6>
+                                                    <h6 class="form-control">{{ $detail->order_id }}</h6>
 		                                    	</div>
                                                 <div class="form-group label-floating">
                                                     <h6>Tanggal Mulai</h6>

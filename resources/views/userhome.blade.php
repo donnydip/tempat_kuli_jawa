@@ -4,33 +4,33 @@
 @section('userhome')
 
 <!-- Card profile -->
-<div class="container">
+  <div class="container">
     <div class="row justify-content-center">
-  <h1 class="h4 text-default font-weight-bold mb-4">TUKANG KAMI</h1>
-      </div>
-</div>
-<div class="container">
-    <div class="row">
-
-@foreach ($show as $shw)
-<form action="{{ route('getTukang') }}" method="post">
-    @csrf
-    <div class="col-md-4">
-    <div class="card mb-3" style="width:300px">
-      <img class="card-img-top" src="{{asset('/storage/foto/'.$shw->id.'/'.$shw->foto)}}" alt="Card image">
-      <div class="card-body">
-        <p class="card-text">Nama : {{ $shw->name }} </p>
-        <p class="card-text">Lokasi : {{ $shw->alamat }}</p>
-        <p class="card-text">Keahlian : {{ $shw->keahlian }}</p>
-        <input type="hidden" value="{{$shw->id}}" name="tukang_id">
-        <input type="submit" class="btn btn-primary" value="Pilih Tukang">
+      <h1 class="h4 text-default font-weight-bold mb-4">TUKANG KAMI</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-between">
+        @foreach ($show as $key => $shw)
+              <div class="card" style="width:300px">
+                <form action="{{ route('getTukang') }}" method="post">
+                  @csrf
+                  <div class="d-flex justify-content-center my-3">
+                    <img class="card-img-top" src="{{ $shw->foto ? asset('/storage/foto/'.$shw->id.'/'.$shw->foto) : asset('default-avatar.png') }}" alt="Card image" style="width: 50%;">
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Nama : {{ $shw->name }} </p>
+                    <p class="card-text">Lokasi : {{ $shw->alamat }}</p>
+                    <p class="card-text">Keahlian : {{ $shw->keahlian }}</p>
+                    <input type="hidden" value="{{$shw->id}}" name="tukang_id">
+                    <input type="submit" class="btn btn-primary" value="Pilih Tukang">
+                  </div>
+                </form>
+              </div>
+        @endforeach
       </div>
     </div>
-    <br>
   </div>
-</form>
-@endforeach
-</div>
 </div>
 <!-- footer -->
 <footer class="footer">

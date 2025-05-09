@@ -50,7 +50,7 @@ class OrderController extends Controller
 
 
         $orderdetail = new OrdersDetail;
-        $orderdetail->orders_id = $orderid;
+        $orderdetail->order_id = $orderid;
         $orderdetail->nama_tukang = $request->input('nama_tukang');
         $orderdetail->jenis_keahlian = $request->input('jenis_keahlian');
         $orderdetail->total_biaya = $totalbiaya;
@@ -68,7 +68,7 @@ class OrderController extends Controller
     }
     public function invoice()
     {
-        $detail = DB::table('orders_details')->latest('created_at')->first();
+        $detail = DB::table('orders_detail')->latest('created_at')->first();
         return view('orders.confirmorder',compact('detail'));
     }
 

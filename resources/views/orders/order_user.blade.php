@@ -102,14 +102,14 @@
                                     <td>{{ $ord->id }}</td>
                                     <td>{{ $ord->user_id}}</td>
                                     <td>{{ $ord->tukang_id}}</td>
-                                    <td>{{ $ord->OrdersDetails->jenis_keahlian}}</td>
-                                    <td>{{ $ord->OrdersDetails->status}}</td>
-                                    <td>{{ $ord->OrdersDetails->status_pembayaran}}</td>
-                                    <td>{{ $ord->OrdersDetails->tanggal_mulai}}</td>
-                                    <td>{{ $ord->OrdersDetails->tanggal_akhir}}</td>
+                                    <td>{{ $ord->OrdersDetails->jenis_keahlian ?? '-' }}</td>
+                                    <td>{{ $ord->OrdersDetails->status ?? '-' }}</td>
+                                    <td>{{ $ord->OrdersDetails->status_pembayaran ?? '-' }}</td>
+                                    <td>{{ $ord->OrdersDetails->tanggal_mulai ?? '-' }}</td>
+                                    <td>{{ $ord->OrdersDetails->tanggal_akhir ?? '-' }}</td>
                                     <form action="{{route('batalorder')}}" method="post">
                                         @csrf
-                                    <input type="hidden" name="ord" value="{{$ord->OrdersDetails->orders_id}}">
+                                    <input type="hidden" name="ord" value="{{$ord->OrdersDetails->order_id ?? ''}}">
                                     <td><input type="submit" class="btn btn-info" value="Batal"></td>
                                     </form>
                                 </tr>

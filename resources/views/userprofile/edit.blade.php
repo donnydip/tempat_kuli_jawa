@@ -1,6 +1,39 @@
 @extends('layouts.app.userapp', ['title' => __('User Profile')])
 
 @section('content')
+    <style>
+        .profile-image-form {
+            position: relative;
+            display: inline-block;
+        }
+        .profile-image-label {
+            cursor: pointer;
+            position: relative;
+            display: block;
+        }
+        .profile-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .profile-image-label:hover .profile-image-overlay {
+            opacity: 1;
+        }
+        .profile-image-overlay i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+
     @include('users.partials.header', [
         'title' => __('Hello') . ' '. auth()->user()->name,
         'description' => __('This is your profile page. You can see information about your profile and manage your profile here'),
@@ -13,10 +46,20 @@
                 <div class="card card-profile shadow">
                     <div class="row justify-content-center">
                         <div class="col-lg-3 order-lg-2">
-                            <div class="card-profile-image">
-                                <a href="#">
-                                    <img alt="foto" src="{{asset('/storage/foto/'.Auth::user()->id.'/'.Auth::user()->foto)}}" class="rounded-circle">
-                                </a>
+                            <div class="card-profile-image d-flex justify-content-center">
+                                <form method="post" action="{{ route('userprofile.updatePhoto') }}" enctype="multipart/form-data" class="profile-image-form">
+                                    @csrf
+                                    @method('put')
+                                    <label for="profile-image" class="profile-image-label">
+                                        <img alt="foto"
+                                             src="{{ auth()->user()->foto ? asset('storage/foto/' . auth()->user()->id . '/' . auth()->user()->foto) . '?' . time() : asset('default-avatar.png') }}"
+                                             class="rounded-circle">
+                                        <div class="profile-image-overlay">
+                                            <i class="ni ni-camera-compact"></i>
+                                        </div>
+                                    </label>
+                                    <input type="file" name="foto" id="profile-image" class="d-none" accept="image/*" onchange="this.form.submit()">
+                                </form>
                             </div>
                         </div>
                     </div>

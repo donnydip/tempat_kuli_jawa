@@ -3,8 +3,8 @@
 @section('menuLogin','active')
 
 @section('log')
-  <section class="section section-shaped section-lg">
-    <div class="shape shape-style-1 bg-gradient-default">
+  <section class="section section-shaped section-lg" style="min-height: 100vh;">
+    <div class="shape shape-style-1 bg-gradient-default" style="height: 100%;">
       <span></span>
       <span></span>
       <span></span>
@@ -14,7 +14,7 @@
       <span></span>
       <span></span>
     </div>
-    <div class="text-center">
+    <div class="text-center pt-5">
         <a href="/">
         <img src="{{asset('assets/img/brand/tkjlogo4.png')}} " width="200">
         </a>
@@ -23,24 +23,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-5">
           <div class="card bg-secondary shadow border-0">
-            <div class="card-header bg-white pb-5">
-              <div class="text-muted text-center mb-3"><small>Sign in with</small></div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/fb.svg')}}"></span>
-                  <span class="btn-inner--text">Facebook</span>
-                </a>
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/google.svg')}}"></span>
-                  <span class="btn-inner--text">Google</span>
-                </a>
-              </div>
-
-            </div>
             <div class="card-body px-lg-5 py-lg-5">
-              <div class="text-center text-muted mb-4">
-                <small>Or sign in with credentials</small>
-              </div>
               <form action="{{ ('login') }}" role="form" method="POST">
                   @csrf
                 <div class="form-group mb-3">
@@ -74,7 +57,7 @@
                   <label class="custom-control-label" for="remember"><span>Remember me</span></label>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary my-4">Sign in</button>
+                  <button type="submit" class="btn btn-primary mt-4 mb-2">Sign in</button>
                 </div>
               </form>
             </div>

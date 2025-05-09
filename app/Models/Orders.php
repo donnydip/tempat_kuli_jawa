@@ -23,7 +23,7 @@ class Orders extends Model
 
     public function OrdersDetails()
     {
-        return $this->hasOne(OrdersDetail::class);
+        return $this->hasOne(OrdersDetail::class, 'order_id','id');
     }
     public function Users()
     {
